@@ -12,7 +12,7 @@ void print_buffer(char *b, int size)
 {
 int byte, index;
 
-or (byte = 0; byte < size; byte += 10)
+for (byte = 0; byte < size; byte += 10)
 {
 printf("%08x: ", byte);
 
@@ -34,7 +34,7 @@ if ((index + byte) >= size)
 break;
 
 else if (*(b + index + byte) >= 31 &&
-(b + index + byte) <= 126)
+*(b + index + byte) <= 126)
 printf("%c", *(b + index + byte));
 
 else
